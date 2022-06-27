@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #2F2E41;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+
+    /* Эти св-ва нужны чтобы section смог занять все свободное пространство и footer прижался к низу  */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+header,
+footer {
+    background-color: #6C63FF;
+}
+
+header {
+    height: 80px;
+}
+
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+section {
+    background-color: #fff;
+    padding-bottom: 50px;
+
+/* делаем section на все свободное пространство */
+    flex-grow: 1;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 52px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 100px 0 70px;
+}
+
+
+.cards-wrap {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 330px;
+    border: 2px solid #E7E7E7;
+    border-radius: 5px;
+    padding: 46px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.card-img {
+    margin: 40px 0 36px;
+}
+
+.card-text span {
+    font-weight: 700;
+}
+
+.nav-list {
+    padding: 20px 100px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.list-item {
+    padding: 9px 15px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.link-icon {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .title {
+        margin: 46px 0;
+        font-size: 36px;
+        line-height: 42px
+    }
+
+    .nav-list {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .logo {
+        width: 160px;
+    }
+
+    .title {
+        margin: 44px 0 36px;
+        font-size: 28px;
+        line-height: 36px
+    }
+
+    .card {
+        padding: 28px 15px;
+    }
+
+    .card-img {
+        margin: 24px 0;
+    }
+
+    .list-item {
+        width: 50%;
+    }
+    
+}
+
